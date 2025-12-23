@@ -1,34 +1,17 @@
-# DGLSS: Single Domain Generalization for LiDAR Semantic Segmentation (CVPR 2023)
+# DGLSS-NL
 
-The is the official Pytorch implementation of our work "Single Domain Generalization for LiDAR Semantic Segmentation".
+The is the official Pytorch implementation of our work "Exploring Single Domain Generalization of LiDAR-based Semantic Segmentation under Imperfect Labels".
 
 
-### [Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Kim_Single_Domain_Generalization_for_LiDAR_Semantic_Segmentation_CVPR_2023_paper.pdf)
+### [Paper](https://arxiv.org/abs/2510.09035)
 
 
 [Hyeonseong Kim*](https://scholar.google.com/citations?hl=ko&user=EP5c3uwAAAAJ), [Yoonsu Kang*](https://scholar.google.com/citations?user=toSjxOAAAAAJ&hl=ko&oi=sra), [Changgyoon Oh](https://scholar.google.com/citations?user=Ib9NEG0AAAAJ&hl=ko&oi=sra), [Kuk-Jin Yoon](https://scholar.google.com/citations?user=1NvBj_gAAAAJ&hl=ko&oi=sra)
-
+[Weitong Kong*],[Zichao Zeng],[Di Wen],[Jiale Wei],[Kunyu Peng],[June Moh Goo],[Jan Boehm],[Rainer Stiefelhagen]
 (* The first two authors contributed equally. In alphabetical order.)
 
 ## Abstract
-With the success of the 3D deep learning models, various perception technologies for autonomous driving have
-been developed in the LiDAR domain. While these models perform well in the trained source domain, they struggle in unseen domains with a domain gap. In this paper, we propose a **single domain generalization method for
-LiDAR semantic segmentation (DGLSS)** that aims to ensure good performance not only in the source domain but
-also in the unseen domain by learning only on the source
-domain. We mainly focus on generalizing from a dense
-source domain and target the domain shift from different
-LiDAR sensor configurations and scene distributions. To
-this end, we augment the domain to simulate the unseen domains by randomly subsampling the LiDAR scans. With the
-augmented domain, we introduce two constraints for generalizable representation learning: sparsity invariant feature consistency (SIFC) and semantic correlation consistency (SCC). The SIFC aligns sparse internal features of
-the source domain with the augmented domain based on the
-feature affinity. For SCC, we constrain the correlation between class prototypes to be similar for every LiDAR scan.
-We also establish a standardized training and evaluation
-setting for DGLSS. With the proposed evaluation setting,
-our method showed improved performance in the unseen
-domains compared to other baselines. Even without access to the target domain, our method performed better than
-the domain adaptation method.
-
-![](figs/framework.jpg)
+Accurate perception is critical for vehicle safety, with LiDAR as a key enabler in autonomous driving. To ensure robust performance across environments, sensor types, and weather conditions without costly re-annotation, domain generalization in LiDAR-based 3D semantic segmentation is essential. However, LiDAR annotations are often noisy due to sensor imperfections, occlusions, and human errors. Such noise degrades segmentation accuracy and is further amplified under domain shifts, threatening system reliability. While noisy-label learning is well-studied in images, its extension to 3D LiDAR segmentation under domain generalization remains largely unexplored, as the sparse and irregular structure of point clouds limits direct use of 2D methods. To address this gap, we introduce the novel task Domain Generalization for LiDAR Semantic Segmentation under Noisy Labels (DGLSS-NL) and establish the first benchmark by adapting three representative noisy-label learning strategies from image classification to 3D segmentation. However, we find that existing noisy-label learning approaches adapt poorly to LiDAR data. We therefore propose DuNe, a dual-view framework with strong and weak branches that enforce feature-level consistency and apply cross-entropy loss based on confidence-aware filtering of predictions. Our approach shows state-of-the-art performance by achieving 56.86% mIoU on SemanticKITTI, 42.28% on nuScenes, and 52.58% on SemanticPOSS under 10% symmetric label noise, with an overall Arithmetic Mean (AM) of 49.57% and Harmonic Mean (HM) of 48.50%, thereby demonstrating robust domain generalization in DGLSS-NL tasks. The code is available on our project page.
 
 ## Requirements
 The code has been tested with Python 3.8, CUDA 11.1, pytorch 1.8.0, and pytorch-lightning 1.6.5.
