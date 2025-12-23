@@ -5,8 +5,6 @@ The is the official Pytorch implementation of our work "Exploring Single Domain 
 
 ### [Paper](https://arxiv.org/abs/2510.09035)
 
-
-[Hyeonseong Kim*](https://scholar.google.com/citations?hl=ko&user=EP5c3uwAAAAJ), [Yoonsu Kang*](https://scholar.google.com/citations?user=toSjxOAAAAAJ&hl=ko&oi=sra), [Changgyoon Oh](https://scholar.google.com/citations?user=Ib9NEG0AAAAJ&hl=ko&oi=sra), [Kuk-Jin Yoon](https://scholar.google.com/citations?user=1NvBj_gAAAAJ&hl=ko&oi=sra)
 [Weitong Kong*],[Zichao Zeng],[Di Wen],[Jiale Wei],[Kunyu Peng],[June Moh Goo],[Jan Boehm],[Rainer Stiefelhagen]
 (* The first two authors contributed equally. In alphabetical order.)
 
