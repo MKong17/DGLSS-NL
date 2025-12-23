@@ -119,12 +119,14 @@ Specify the path of checkpoint to test in config_{dataset_name}.yaml (test_param
 If you use our work, please cite us!
 
 ~~~
-@inproceedings{kim2023single,
-  title={Single Domain Generalization for LiDAR Semantic Segmentation},
-  author={Kim, Hyeonseong and Kang, Yoonsu and Oh, Changgyoon and Yoon, Kuk-Jin},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={17587--17598},
-  year={2023}
+@misc{kong2025exploringsingledomaingeneralization,
+      title={Exploring Single Domain Generalization of LiDAR-based Semantic Segmentation under Imperfect Labels}, 
+      author={Weitong Kong and Zichao Zeng and Di Wen and Jiale Wei and Kunyu Peng and June Moh Goo and Jan Boehm and Rainer Stiefelhagen},
+      year={2025},
+      eprint={2510.09035},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2510.09035}, 
 }
 ~~~
 
