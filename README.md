@@ -22,7 +22,7 @@ DGLSS-NL introduces **Domain Generalization for LiDAR Semantic Segmentation unde
 The repository provides the implementation of **DuNe**, a dual-view framework designed for robust LiDAR segmentation under label noise and domain shift. DuNe combines strong/weak branches, feature-level consistency, and confidence-aware filtering to improve generalization across SemanticKITTI, nuScenes-lidarseg, Waymo, and SemanticPOSS.
 
 <p align="center">
-  <img src="figs/pipeline.pptx" alt="DGLSS-NL framework" width="88%">
+  <img src="figs/pipeline.pdf" alt="DGLSS-NL framework" width="88%">
 </p>
 
 ## Paper
