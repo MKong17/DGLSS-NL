@@ -36,14 +36,25 @@ Weitong Kong<sup>*</sup>, Zichao Zeng<sup>*</sup>, Di Wen, Jiale Wei, Kunyu Peng
 - **Version:** v2, revised March 10, 2026
 
 ## Main Results
+<p align="center">
+  <img src="assets/main_results.png" width="90%">
+</p>
 
-Under **10% symmetric label noise**, DuNe achieves strong single-source domain generalization across three LiDAR segmentation benchmarks:
+We evaluate **DuNe** under different levels of **symmetric label noise** (10%, 20%, and 50%) and report the single-source domain generalization performance on three unseen target datasets: **SemanticKITTI**, **nuScenes**, and **SemanticPOSS**.
 
-| Method | SemanticKITTI mIoU | nuScenes mIoU | SemanticPOSS mIoU | AM | HM |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| **DuNe (ours)** | **56.86** | **42.28** | **52.58** | **49.57** | **48.50** |
+| Noise Ratio | SemanticKITTI | nuScenes | SemanticPOSS | AM | HM |
+|------------|--------------:|---------:|-------------:|---:|---:|
+| **10%** | **56.86** | **42.28** | **52.58** | **49.57** | **48.50** |
+| **20%** | **53.20** | **39.69** | **48.05** | **46.44** | **45.46** |
+| **50%** | **52.37** | **37.18** | **43.07** | **44.78** | **43.49** |
 
-AM and HM denote the Arithmetic Mean and Harmonic Mean across target-domain results, respectively.
+AM and HM denote the Arithmetic Mean and Harmonic Mean across target-domain datasets, respectively.
+
+Our method consistently achieves strong cross-domain generalization under all noise settings. Under **10% symmetric label noise**, DuNe reaches **56.86 mIoU** on SemanticKITTI, **42.28 mIoU** on nuScenes, and **52.58 mIoU** on SemanticPOSS, achieving **49.57 AM** and **48.50 HM**. Even when the noise ratio increases to **20%**, DuNe maintains competitive performance with **46.44 AM** and **45.46 HM**, outperforming existing noisy-label learning approaches by a clear margin.
+
+Remarkably, under the extremely challenging **50% symmetric noise** setting, DuNe still obtains **52.37 mIoU**, **37.18 mIoU**, and **43.07 mIoU** on SemanticKITTI, nuScenes, and SemanticPOSS, respectively, resulting in **44.78 AM** and **43.49 HM**. Compared with the strongest baseline (NPN), DuNe improves the harmonic mean (HM) by **+4.57**, **+6.93**, and **+8.17** points under 10%, 20%, and 50% noise, respectively, demonstrating increasingly stronger robustness as label corruption becomes more severe.
+
+These results indicate that DuNe effectively leverages complementary supervision from candidate and complementary labels while preserving domain-invariant representations, leading to superior robustness against noisy annotations and stronger transferability to unseen domains.
 
 ## Highlights
 
