@@ -37,7 +37,7 @@ Weitong Kong<sup>*</sup>, Zichao Zeng<sup>*</sup>, Di Wen, Jiale Wei, Kunyu Peng
 
 ## Main Results
 <p align="center">
-  <img src="figs/pic1.jpg" width="90%">
+  <img src="figs/pic1.jpg" width="60%">
 </p>
 
 We evaluate **DuNe** under different levels of **symmetric label noise** (10%, 20%, and 50%) and report the single-source domain generalization performance on three unseen target datasets: **SemanticKITTI**, **nuScenes**, and **SemanticPOSS**.
